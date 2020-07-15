@@ -1,0 +1,7 @@
+.md-text {
+  @include md-text;
+}
+
+.md-text.beneath-two-images {
+  padding: 3em 0;
+}

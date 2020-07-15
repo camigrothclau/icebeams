@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Limelight&display=swap");
+
+$colors: (
+  darkgreen: #1e6262,
+  lightgreen: #d3f9f9,
+  orangered: #ea424b,
+  text-color: #182828,
+  white: #ffffff,
+);
+
+@function color($nameOfColor) {
+  @return map-get($colors, $nameOfColor);
+}
+
+html {
+  font-size: 10px;
+  position: relative;
+}
+
+$font-sizes: (
+  xl: 12rem,
+  lg: 7.5rem,
+  md: 3rem,
+  sm: 1.6rem,
+  xs: 1rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+h1,
+p,
+a {
+  color: color(text-color);
+}
+h1 {
+  font-family: "Limelight", cursive;
+  font-size: size(xl) - 3rem;
+}
+p {
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}

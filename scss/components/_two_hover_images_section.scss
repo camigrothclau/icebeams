@@ -1,0 +1,96 @@
+.two-images {
+  display: grid;
+  height: 100vh;
+  background-color: color(orangered);
+  grid-template-rows: 1fr 10fr;
+  position: relative;
+
+  &-svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: visible;
+
+    #drop {
+      animation: drop 1.8s infinite cubic-bezier(1, 0.19, 0.83, 0.96);
+    }
+  }
+  &-svg-bite {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+
+    #bite-on {
+      animation: bite 3s infinite;
+    }
+  }
+
+  &__heading {
+    font-size: size(md);
+    color: color(white);
+    margin-top: 1em;
+    margin-left: 1.5em;
+    top: 1em;
+    @include layer(1, sticky);
+  }
+  &__wrapper {
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+  }
+  &___image {
+    position: relative;
+    width: 47%;
+    background-color: black;
+
+    &:hover img {
+      opacity: 0.6;
+    }
+    &:hover .hover-text {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 76vh;
+      object-fit: cover;
+      vertical-align: bottom;
+      transition: opacity 0.3s;
+    }
+
+    .hover-text {
+      @include posCenter;
+      opacity: 0;
+      transition: opacity 0.4s;
+      text-align: center;
+      width: 100%;
+
+      h1,
+      p {
+        color: color(white);
+      }
+      p {
+        @include md-text;
+      }
+    }
+  }
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(900px);
+  }
+}
+@keyframes bite {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

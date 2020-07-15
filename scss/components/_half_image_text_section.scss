@@ -1,0 +1,19 @@
+.half-image-text {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12rem;
+
+  &__img {
+    width: 50%;
+    @include layer(1, relative);
+  }
+  &__text-group {
+    width: 40%;
+    @include flex-column-center;
+  }
+  &___paragraph {
+    width: 60%;
+    padding-bottom: 1em;
+    @include md-text;
+  }
+}

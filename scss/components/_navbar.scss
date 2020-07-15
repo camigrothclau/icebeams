@@ -1,0 +1,21 @@
+.nav-bar {
+  display: flex;
+  height: 50px;
+  width: 50%;
+  align-items: center;
+  padding-top: 2em;
+  position: absolute;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    margin-left: 3em;
+    text-transform: uppercase;
+    font-size: size(sm);
+  }
+}
+.nav-bar-list-link {
+  cursor: pointer;
+}
