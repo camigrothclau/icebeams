@@ -1,89 +1,33 @@
-.anime-section {
-  position: relative;
+.slide-text {
+  font-size: size(xl);
+  font-weight: 700;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px color(orangered);
+  display: flex;
+  align-items: center;
+  left: -6%;
+  width: 100vw;
+  overflow: hidden;
+  @include layer(2, relative);
 
-  .slide-text {
-    font-size: size(xl);
-    font-weight: 700;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 3px color(orangered);
+  &:hover .fas {
+    color: color(orangered);
+  }
+
+  &-item {
     display: flex;
     align-items: center;
-    left: -6%;
-    width: 100vw;
-    overflow: hidden;
-    @include layer(2, relative);
+    animation: slide 7s infinite linear;
 
-    &:hover .fas {
-      color: color(orangered);
-    }
-
-    &-item {
-      display: flex;
-      align-items: center;
-      animation: slide 7s infinite linear;
-
-      .fas {
-        transition: color 0.5s;
-      }
-    }
-
-    > div {
-      padding-right: 0.5em;
+    .fas {
+      transition: color 0.5s;
     }
   }
 
-  &-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+  > div {
+    padding-right: 0.5em;
   }
-
-  &-image {
-    width: 80%;
-
-    .coffee,
-    .strawb-ice,
-    .strawb-waffle {
-      width: 100%;
-    }
-  }
-  &-image:nth-child(2) {
-    justify-self: flex-end;
-    margin-top: 20%;
-    @include layer(1, relative);
-  }
-  &-image:nth-child(3) {
-    grid-area: 2 / span 2;
-    top: -30%;
-    left: 10%;
-    @include layer(0, relative);
-  }
-
-  /*
-  &-image {
-    position: relative;
-
-    .coffee {
-      width: 40%;
-      top: 0;
-      left: 0;
-      @include layer(0, absolute);
-    }
-    .strawb-ice {
-      width: 40%;
-      top: 100px;
-      right: 0;
-      @include layer(1, absolute);
-    }
-    .strawb-waffle {
-      top: 600px;
-      left: 200px;
-      right: 0;
-      width: 60%;
-      @include layer(0, absolute);
-    }
-  } */
 }
 
 @keyframes slide {

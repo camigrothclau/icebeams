@@ -5,6 +5,7 @@
   align-items: center;
   padding-top: 2em;
   position: absolute;
+  z-index: 1;
 
   &-list {
     display: flex;

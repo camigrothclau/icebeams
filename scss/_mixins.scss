@@ -2,6 +2,10 @@
   font-size: size(md);
   text-align: center;
 }
+@mixin normal-text($p-width: 40%) {
+  font-size: size(sm);
+  width: $p-width;
+}
 
 @mixin posCenter {
   position: absolute;

@@ -1,5 +1,6 @@
 @import "global";
 @import "mixins";
+
 @import "components/navbar";
 @import "components/main_header";
 @import "components/half_image_text_section";
@@ -9,3 +10,8 @@
 @import "components/anime_slide_text";
 @import "components/footer";
 @import "components/logo";
+
+@import "components/text_and_svg_section";
+@import "components/image_slider";
+
+@import "pages/frontpage";

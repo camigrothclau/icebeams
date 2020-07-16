@@ -1,0 +1,65 @@
+.upper-part {
+  width: 100vw;
+  display: flex;
+  height: 60vh;
+  padding-top: 16rem;
+  position: relative;
+
+  &-text {
+    width: 50%;
+  }
+  &-text-div {
+    width: 70%;
+    margin: 0 auto;
+  }
+  &-text-paragraph {
+    @include normal-text(90%);
+  }
+  &-svg {
+    width: 50%;
+    background-color: color(mdgreen);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    @include flex-column-center;
+
+    &___svg {
+      overflow: visible;
+      #blink,
+      #blink_1,
+      #blink_2,
+      #blink_3,
+      #blink_4,
+      #blink_5,
+      #blink_6,
+      #blink_7 {
+        animation: blink 1s infinite linear;
+        transform-origin: center;
+      }
+      #car {
+        offset-path: path("M -20,-8 M -2,-8 M -10,-12");
+        animation: move 3s infinite alternate ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}

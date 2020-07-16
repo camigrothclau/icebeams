@@ -17,8 +17,7 @@
     @include layer(1, relative);
   }
   &__paragraph {
-    font-size: size(sm);
-    width: 40%;
+    @include normal-text;
     margin: 1em 0 4em;
   }
   &__svg {

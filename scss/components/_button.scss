@@ -1,7 +1,6 @@
 .btn {
   background: transparent;
   border: 3px solid color(darkgreen);
-  color: color(darkgreen);
   border-radius: 5px;
   padding: 1em 3em;
   text-transform: uppercase;
@@ -10,8 +9,14 @@
   cursor: pointer;
   outline: none;
 
+  a {
+    color: color(darkgreen);
+  }
+
   &:hover {
     background: color(darkgreen);
+  }
+  &:hover a {
     color: color(white);
   }
 }

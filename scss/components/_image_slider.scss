@@ -1,0 +1,73 @@
+.image-slider {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: color(mdgreen);
+
+  &-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: inherit;
+    width: inherit;
+    animation: slider 12s infinite linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &__image {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+  }
+  &-text {
+    background-color: color(white);
+    border: 5px solid color(orangered);
+    position: absolute;
+    bottom: 300px;
+    right: 100px;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+
+    h1 {
+      font-size: size(lg);
+    }
+    p {
+      @include normal-text(100%);
+    }
+  }
+}
+
+$animList: 1 0s, 2 4s, 3 8s;
+
+@each $item in $animList {
+  .image-slider-div:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item, 2);
+  }
+}
+
+@keyframes slider {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+  30% {
+    visibility: visible;
+    opacity: 1;
+  }
+  32% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

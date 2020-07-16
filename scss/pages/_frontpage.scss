@@ -1,0 +1,42 @@
+.anime-section {
+  position: relative;
+
+  p {
+    font-family: "Limelight", cursive;
+    font-size: size(sm) + 0.5rem;
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+
+  &-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  &-image {
+    width: 80%;
+
+    .coffee,
+    .strawb-ice,
+    .strawb-waffle {
+      width: 100%;
+    }
+  }
+  &-image:nth-child(2) {
+    justify-self: flex-end;
+    margin-top: 20%;
+    @include layer(1, relative);
+  }
+  &-image:nth-child(3) {
+    grid-area: 2 / span 2;
+    top: -30%;
+    left: 10%;
+    @include layer(0, relative);
+  }
+}
+
+.md-text.beneath-two-images {
+  padding: 3em 0;
+}
