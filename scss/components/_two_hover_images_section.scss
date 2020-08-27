@@ -77,6 +77,18 @@
     }
   }
 }
+.display {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+#miriam-story-image {
+  display: block;
+}
+.miriam-story {
+  font-size: size(xs);
+}
 
 @keyframes drop {
   from {
@@ -92,5 +104,39 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .two-images {
+    &-svg {
+      transform: scale(0.8);
+      top: -20px;
+      right: -20px;
+    }
+    &-svg-bite {
+      transform: scale(0.8);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .two-images {
+    height: 80vh;
+    &-svg {
+      transform: scale(0.5);
+      top: -60px;
+      right: -20px;
+    }
+    &-svg-bite {
+    }
+    &__wrapper {
+      width: 80%;
+    }
+    &___image {
+      img {
+        height: auto;
+      }
+    }
   }
 }

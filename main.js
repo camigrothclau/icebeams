@@ -8,19 +8,59 @@ var offsetTopTwo = imgSticky[1].offsetTop;
 var offsetTopThree = imgSticky[2].offsetTop;
 
 
-window.addEventListener('mousemove', (e) => {
-    stickyText.forEach((item) => {
 
-        mouseY = event.clientY;
-        mouseX = event.clientX;
-        item.style.top = mouseY + "px";
-        item.style.left = mouseX + "px";
+textAndImg.forEach((item) => {
+    item.addEventListener('mousemove', (e) => {
+        console.log(e)
+        var mouseY = e.offsetY;
+        var mouseX = e.offsetX;
 
-    });
+        var text = item.querySelector('.image-sticky-text');
+
+        text.style.top = (mouseY + 10) + "px";
+        text.style.left = (mouseX + 10) + "px";
+    })
+
+
+    // var mouseY = e.clientY;
+    // var mouseX = e.clientX;
+
+    // item.style.top = mouseY + "px";
+    // item.style.left = mouseX + "px";
+
+    // if (y - offsetTop <= 0) {
+    //     stickyText.style.top = 0 + "px";
+    //     stickyText.style = "display: none";
+    //     return;
+    // } else {
+    //     stickyText.style = "display: block";
+    // }
+    // if (y - offsetTop >= imgSticky.offsetHeight) {
+    //     stickyText.style.top = imgSticky.offsetHeight + "px";
+    //     stickyText.style = "display: none";
+    //     return;
+    // } else {
+    //     stickyText.style = "display: block";
+    // }
+    // stickyText.style.top = y - offsetTop + "px";
 });
 
 
 
+
+
+
+
+
+const miriamStoryDiv = document.getElementById('miriam-story-div');
+const miriamImgDiv = document.getElementById('miriam-img-div');
+const miriamImg = document.getElementById('miriam-img');
+const miriamName = document.getElementById('miriam-name');
+
+miriamImgDiv.addEventListener('click', () => {
+    miriamStoryDiv.classList.toggle('display-none');
+    miriamImgDiv.classList.toggle('display-none');
+})
 
 
 

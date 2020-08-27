@@ -1,0 +1,205 @@
+.ingredient-container {
+  padding-top: 8%;
+  display: grid;
+
+  &-p {
+    @include md-text;
+    width: 40%;
+    text-align: center;
+    justify-self: end;
+
+    .p-span {
+      color: color(mdgreen);
+    }
+    .p-span-one {
+      font-family: "Limelight", cursive;
+      font-size: size(lg);
+      line-height: 0;
+    }
+    .p-span-two {
+      font-weight: 700;
+    }
+  }
+}
+
+.icecreams-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  grid-gap: 11rem;
+  padding: 9rem 0 12rem;
+
+  h3 {
+    padding-top: 1em;
+    line-height: 1.4;
+  }
+}
+
+// Icecreams colors
+$blackberry: #c4a5d7;
+$pistacio: #aae07f;
+$menthe: #b6d9f9;
+$lime_cilantro: #dbf9b6;
+$banana_mango: #f8e85a;
+$straw-raspberry: #f8635a;
+$choc_peanut: #7a5709;
+$licorice_pepper: #717273;
+$redcurrant_rose: #ffbcbc;
+$vanilla_fill: #ffffff;
+$vanilla_stroke: #d0cfcf;
+$elder_crunch: #fffacf;
+$peach: #f4954f;
+
+.blackberry {
+  fill: $blackberry;
+
+  &:nth-child(4) {
+    fill: darken($blackberry, 20%);
+  }
+}
+
+.pistacio-cream {
+  fill: $pistacio;
+
+  &:nth-child(4) {
+    fill: darken($pistacio, 20%);
+  }
+}
+
+.menthe {
+  fill: $menthe;
+
+  &:nth-child(4) {
+    fill: darken($menthe, 20%);
+  }
+}
+
+.lime-cilantro {
+  fill: $lime_cilantro;
+
+  &:nth-child(4) {
+    fill: darken($lime_cilantro, 20%);
+  }
+}
+
+.banana-mango {
+  fill: $banana_mango;
+
+  &:nth-child(4) {
+    fill: darken($banana_mango, 20%);
+  }
+}
+
+.straw-raspberry {
+  fill: $straw-raspberry;
+
+  &:nth-child(2) {
+    fill: lighten($straw-raspberry, 20%);
+  }
+
+  &:nth-child(4) {
+    fill: darken($straw-raspberry, 20%);
+  }
+}
+
+.choc-peanut {
+  fill: $choc_peanut;
+
+  &:nth-child(1) {
+    fill: lighten($choc_peanut, 10%);
+  }
+
+  &:nth-child(2) {
+    fill: lighten($choc_peanut, 20%);
+  }
+
+  &:nth-child(4) {
+    fill: darken($choc_peanut, 20%);
+  }
+}
+
+.licorice-pepper {
+  fill: $licorice_pepper;
+
+  &:nth-child(1) {
+    fill: lighten($licorice_pepper, 10%);
+  }
+
+  &:nth-child(4) {
+    fill: darken($licorice_pepper, 20%);
+  }
+}
+
+.redcurrant-rose {
+  fill: $redcurrant_rose;
+
+  &:nth-child(4) {
+    fill: darken($redcurrant_rose, 20%);
+  }
+}
+
+.vanilla {
+  fill: $vanilla_fill;
+  stroke: $vanilla_stroke;
+  stroke-width: 1.5px;
+
+  &:nth-child(4) {
+    fill: darken($vanilla_fill, 20%);
+  }
+}
+
+.elder-crunch {
+  fill: $elder_crunch;
+
+  &:nth-child(4) {
+    fill: darken($elder_crunch, 20%);
+  }
+}
+
+.peach {
+  fill: $peach;
+
+  &:nth-child(4) {
+    fill: darken($peach, 20%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .icecreams-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 11rem;
+    padding: 9rem 0 12rem;
+
+    h3 {
+      padding-top: 1em;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .ingredient-container {
+    padding-top: 12%;
+
+    &-p {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .icecreams-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5rem;
+  }
+  .ingredient-container {
+    &-p {
+      font-size: 2rem;
+      width: 90%;
+      justify-self: center;
+      padding: 3em 0;
+    }
+  }
+}

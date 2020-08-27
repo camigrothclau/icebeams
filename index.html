@@ -12,10 +12,14 @@
 <body>
     <header class="container 1">
         <nav class="nav-bar">
-            <div class="logo">Icebeams.</div>
             <ul class="nav-bar-list">
+                <li>
+                    <a href="index.html">
+                        <div class="logo">Icebeams.</div>
+                    </a>
+                </li>
                 <li class="nav-bar-list-item">
-                    <a href="index.html" class="nav-bar-list-link">
+                    <a href="index.html" class="nav-bar-list-link home">
                         Home
                     </a>
                 </li>
@@ -25,12 +29,12 @@
                     </a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a href="#" class="nav-bar-list-link">
+                    <a href="ingredients.html" class="nav-bar-list-link">
                         Ingredients
                     </a>
                 </li>
                 <li class="nav-bar-list-item">
-                    <a href="shops.html" class="nav-bar-list-link">
+                    <a href="shops.html" class="nav-bar-list-link contact">
                         Contact Us
                     </a>
                 </li>
@@ -161,13 +165,30 @@
         </svg>
         <p class="two-images__heading">Meet the owners.</p>
         <div class="two-images__wrapper">
-            <div class="two-images___image">
-                <img src="img/miriam.png" class="hover-image">
-                <div class="hover-text">
+
+
+            <div class="two-images___image" id="miriam-img-div">
+                <img src="img/miriam.png" class="hover-image" id="miriam-img">
+
+                <div class="hover-text" id="miriam-name">
                     <h1>Miriam</h1>
                     <p>Our Icecream Maker</p>
                 </div>
             </div>
+
+            <div class="two-images___image display-none" id="miriam-story-div">
+
+                <img src="img/miriam2.jpg" class="hover-image" id="miriam-story-img">
+                <div class="hover-text" id="miriam-name">
+                    <h1>A Country Girl</h1>
+                    <p class="miriam-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odit
+                        dolorem cupiditate cum
+                        ipsum quos. Magni ipsam</p>
+                </div>
+            </div>
+
+
+
             <div class="two-images___image">
                 <img src="img/icedog.png" class="hover-image">
                 <div class="hover-text">
@@ -175,6 +196,8 @@
                     <p>Our Icecream Tester</p>
                 </div>
             </div>
+
+
         </div>
     </section>
     <div class="container 3">
@@ -205,7 +228,7 @@
 
             </div>
             <div class="anime-section-images">
-                <div class="anime-section-image">
+                <div class="anime-section-image padding-hack">
                     <img src="img/icecoffee.png" class="sticky-image coffee">
                     <p class="image-sticky-text">Caramel Ice Coffee</p>
                 </div>

@@ -35,10 +35,15 @@ $font-sizes: (
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+  min-height: 100%;
+}
 body {
   font-family: "Lato", sans-serif;
 }
 h1,
+h3,
 p,
 a {
   color: color(text-color);
@@ -46,6 +51,10 @@ a {
 h1 {
   font-family: "Limelight", cursive;
   font-size: size(xl) - 3rem;
+}
+h3 {
+  font-family: "Limelight", cursive;
+  font-size: size(sm) + 0.4rem;
 }
 p {
   line-height: 1.7;
@@ -57,4 +66,23 @@ a {
 .container {
   width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 5rem;
+  }
 }

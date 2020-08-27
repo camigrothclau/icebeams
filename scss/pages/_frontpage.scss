@@ -1,12 +1,20 @@
 .anime-section {
   position: relative;
 
+  &-image:hover p {
+    display: block;
+  }
+  .padding-hack {
+    padding-bottom: 32%;
+  }
+
   p {
     font-family: "Limelight", cursive;
     font-size: size(sm) + 0.5rem;
     width: 100%;
     height: auto;
     position: absolute;
+    display: none;
   }
 
   &-images {
@@ -16,7 +24,9 @@
   }
 
   &-image {
+    position: relative;
     width: 80%;
+    overflow: hidden;
 
     .coffee,
     .strawb-ice,
@@ -24,16 +34,19 @@
       width: 100%;
     }
   }
+  &-image:nth-child(1) p {
+    color: color(white);
+  }
   &-image:nth-child(2) {
     justify-self: flex-end;
     margin-top: 20%;
-    @include layer(1, relative);
+    z-index: 1;
   }
   &-image:nth-child(3) {
     grid-area: 2 / span 2;
     top: -30%;
     left: 10%;
-    @include layer(0, relative);
+    z-index: 0;
   }
 }
 

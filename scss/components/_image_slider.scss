@@ -24,7 +24,7 @@
     background-color: color(white);
     border: 5px solid color(orangered);
     position: absolute;
-    bottom: 300px;
+    bottom: 80px;
     right: 100px;
     padding: 3em;
     display: flex;
@@ -58,16 +58,22 @@ $animList: 1 0s, 2 4s, 3 8s;
     visibility: visible;
     opacity: 1;
   }
-  30% {
+  28% {
     visibility: visible;
     opacity: 1;
   }
-  32% {
+  36% {
     visibility: hidden;
     opacity: 0;
   }
   100% {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .slide-text {
+    font-size: 10rem;
   }
 }

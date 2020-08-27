@@ -18,6 +18,7 @@
   &-svg {
     width: 50%;
     background-color: color(mdgreen);
+    overflow: visible;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -35,12 +36,16 @@
       #blink_5,
       #blink_6,
       #blink_7 {
-        animation: blink 1s infinite linear;
+        animation: blink 4s infinite linear;
         transform-origin: center;
       }
       #car {
-        offset-path: path("M -20,-8 M -2,-8 M -10,-12");
-        animation: move 3s infinite alternate ease-in-out;
+        offset-path: path(
+          "M208.628 246.557C194.001 240.683 179.884 234.046 165.549 226.716C79.5051 182.712 18.289 130.349 28.8159 109.771C31.4161 104.687 38.1543 102.009 48.1281 101.524"
+        );
+        animation: move 16s infinite linear;
+        transform-origin: center;
+        transform-box: fill-box;
       }
     }
   }
@@ -55,11 +60,24 @@
   }
 }
 
+/*
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+} */
+
 @keyframes move {
   0% {
     offset-distance: 0%;
+    transform: scale(1) rotateZ(-15deg);
   }
+  70% {
+    transform: scale(1) rotateZ(-15deg);
+  }
+
   100% {
     offset-distance: 100%;
+    transform: scale(0.5) rotateZ(-15deg);
   }
 }

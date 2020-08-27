@@ -17,3 +17,11 @@
     @include md-text;
   }
 }
+
+@media (max-width: 1100px) {
+  .half-image-text {
+    &___paragraph {
+      width: 80%;
+    }
+  }
+}
